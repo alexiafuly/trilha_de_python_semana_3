@@ -29,5 +29,13 @@ print(f'Quantidade total de reagentes diferentes: {len(set_reagentes)}')
 
 listas_combinadas = zip(reagentes, lotes, purezas)
 lista_de_tuplas = list(listas_combinadas)
-print(lista_de_tuplas)
 
+# Geração de Relatório
+
+for tupla in lista_de_tuplas:
+   nome,lote,pureza = tupla
+   # for  in tupla:
+   print('Frasco do lote: {} | Reagente: {} | Pureza: {}%'.format(lote, nome, pureza))
+
+
+   
