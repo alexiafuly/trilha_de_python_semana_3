@@ -22,8 +22,8 @@ purezas = [99.5, 92.0, 99.5, 98.0, 99.9, 98.5, 96.0, 99.0, 99.0, 98.8, 99.5, 92.
 # Identificação dos Tipos de Reagentes
 
 set_reagentes = set(reagentes)
-print(f'Reagentes disponíveis: {set_reagentes}')
-print(f'Quantidade total de reagentes diferentes: {len(set_reagentes)}')
+print(f'\n Reagentes disponíveis: {set_reagentes}')
+print(f'\n Quantidade total de reagentes diferentes: {len(set_reagentes)}')
 
 # Estruturação do Inventário
 
@@ -32,11 +32,12 @@ lista_de_tuplas = list(listas_combinadas)
 
 # Geração de Relatório
 
+print('\n Relatório:')
 for tupla in lista_de_tuplas:
    nome,lote,pureza = tupla
    print('Frasco do lote: {} | Reagente: {} | Pureza: {}%'.format(lote, nome, pureza))
 
 # Filtragem por Critério de Qualidade
 
-lista_lotes_aprovados = ['Frasco do lote: {} | Reagente: {} | Pureza: {}%'.format(lote, nome, pureza) for nome, lote, pureza in lista_de_tuplas if pureza >= 98.0]
-print(lista_lotes_aprovados)
+lista_lotes_aprovados = [lote for nome, lote, pureza in lista_de_tuplas if pureza >= 98.0]
+print(f'\n Lotes aprovados com alto grau de pureza (>=98%): {lista_lotes_aprovados}')
