@@ -24,3 +24,10 @@ purezas = [99.5, 92.0, 99.5, 98.0, 99.9, 98.5, 96.0, 99.0, 99.0, 98.8, 99.5, 92.
 set_reagentes = set(reagentes)
 print(f'Reagentes disponíveis: {set_reagentes}')
 print(f'Quantidade total de reagentes diferentes: {len(set_reagentes)}')
+
+# Estruturação do Inventário
+
+listas_combinadas = zip(reagentes, lotes, purezas)
+lista_de_tuplas = list(listas_combinadas)
+print(lista_de_tuplas)
+
