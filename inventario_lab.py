@@ -40,4 +40,3 @@ for tupla in lista_de_tuplas:
 
 lista_lotes_aprovados = ['Frasco do lote: {} | Reagente: {} | Pureza: {}%'.format(lote, nome, pureza) for nome, lote, pureza in lista_de_tuplas if pureza >= 98.0]
 print(lista_lotes_aprovados)
-   
