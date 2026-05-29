@@ -34,8 +34,10 @@ lista_de_tuplas = list(listas_combinadas)
 
 for tupla in lista_de_tuplas:
    nome,lote,pureza = tupla
-   # for  in tupla:
    print('Frasco do lote: {} | Reagente: {} | Pureza: {}%'.format(lote, nome, pureza))
 
+# Filtragem por Critério de Qualidade
 
+lista_lotes_aprovados = ['Frasco do lote: {} | Reagente: {} | Pureza: {}%'.format(lote, nome, pureza) for nome, lote, pureza in lista_de_tuplas if pureza >= 98.0]
+print(lista_lotes_aprovados)
    
